@@ -26,15 +26,10 @@ body {
     body {
         height: 100vh;
         background: url(../img/bg-pattern-desktop.svg);
-        position: relative;
-    }
-}
-
-@media (min-width: 1500px) {
-    body {
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: right 410px center;
         background-size: cover;
+        position: relative;
     }
 }
 
