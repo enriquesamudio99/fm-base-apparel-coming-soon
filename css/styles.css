@@ -30,6 +30,14 @@ body {
     }
 }
 
+@media (min-width: 1500px) {
+    body {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -166,6 +174,25 @@ img {
     color: var(--desaturatedRed);
 }
 
+@media (min-width: 1200px) {
+    .field input {
+        font-size: 1rem;
+    }
+}
+
+.field.error > input {
+    border: 2px solid var(--softRed);
+    background-image: url(../img/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: center right 5rem;
+}
+
+@media (min-width: 1200px) {
+    .field.error > input {
+        background-position: center right 6.5rem;
+    }
+}
+
 .field button {
     position: absolute;
     right: 0;
@@ -193,4 +220,16 @@ img {
     .field button {
         padding: .75rem 2.5rem;
     }
+}
+
+.invalid-feedback {
+    margin: .5rem 0 0 1.5rem;
+    display: none;
+    font-size: 0.875rem;
+    color: var(--softRed);
+    text-align: left;
+}
+
+.field.error + .invalid-feedback {
+    display: block;
 }
